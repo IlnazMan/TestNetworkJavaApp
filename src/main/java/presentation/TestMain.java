@@ -1,7 +1,8 @@
 package presentation;
 
-import data.providers.ApiDataProvider;
-import domain.usecases.GetAllDataUseCase;
+import data.providers.ApiPokemonProvider;
+import domain.models.Pokemon;
+import domain.usecases.GetPokemonByIdUseCase;
 
 import java.util.Collections;
 import java.util.List;
@@ -14,18 +15,27 @@ public class TestMain {
 
 
     public static void main(String[] args) {
-        GetAllDataUseCase useCase = new GetAllDataUseCase(new ApiDataProvider());
-        //System.out.println(useCase.getAllData());
+        System.out.println("Enter pokemon id:");
+        new TestMain().testPokemonApiProvider();
+        //new TestMain().generateGroups();
+    }
 
+    /**
+     * group generator
+     */
+    private void generateGroups() {
         List<Integer> list = Stream.iterate(1, integer -> integer + 1)
                 .limit(15)
                 .collect(Collectors.toList());
         Collections.shuffle(list, new Random());
         System.out.println(list);
+    }
 
+    private void testPokemonApiProvider() {
+        GetPokemonByIdUseCase useCase = new GetPokemonByIdUseCase(new ApiPokemonProvider());
         Scanner scanner = new Scanner(System.in);
         int i = scanner.nextInt();
-
-        System.out.println(useCase.getPokemonById(i));
+        Pokemon pokemon = useCase.getPokemonById(i);
+        System.out.println(pokemon!=null?pokemon:"Sorry.. Not found..");
     }
 }

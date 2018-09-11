@@ -5,15 +5,19 @@ import data.mapper.PokeMapper;
 import data.models.PokeResponse;
 import data.utils.NetworkUtils;
 import domain.models.Pokemon;
-import domain.providers.DataProvider;
+import domain.providers.PokemonProvider;
 
 import java.io.IOException;
 
-public class ApiDataProvider implements DataProvider {
+/**
+ * Pokemon provider from API
+ */
+
+public class ApiPokemonProvider implements PokemonProvider {
 
     private Api api;
 
-    public ApiDataProvider() {
+    public ApiPokemonProvider() {
         api = NetworkUtils.buildApi(Api.class, Api.URL);
     }
 

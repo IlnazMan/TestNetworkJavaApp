@@ -1,12 +1,12 @@
 package domain.usecases;
 
 import domain.models.Pokemon;
-import domain.providers.DataProvider;
+import domain.providers.PokemonProvider;
 
-public class GetAllDataUseCase {
-    private DataProvider provider;
+public class GetPokemonByIdUseCase {
+    private PokemonProvider provider;
 
-    public GetAllDataUseCase(DataProvider provider) {
+    public GetPokemonByIdUseCase(PokemonProvider provider) {
         this.provider = provider;
     }
 
