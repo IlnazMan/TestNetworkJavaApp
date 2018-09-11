@@ -1,0 +1,48 @@
+package domain.models;
+
+public class Pokemon {
+    private int id;
+    private String name;
+    private int base_experience;
+    private int height;
+    private int weight;
+
+    public Pokemon(int id, String name, int base_experience, int height, int weight) {
+        this.id = id;
+        this.name = name;
+        this.base_experience = base_experience;
+        this.height = height;
+        this.weight = weight;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getBase_experience() {
+        return base_experience;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Pokemon{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", base_experience=" + base_experience +
+                ", height=" + height +
+                ", weight=" + weight +
+                '}';
+    }
+}
