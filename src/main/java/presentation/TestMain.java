@@ -16,8 +16,8 @@ public class TestMain {
 
     public static void main(String[] args) {
         System.out.println("Enter pokemon id:");
-        new TestMain().testPokemonApiProvider();
-        //new TestMain().generateGroups();
+        //new TestMain().testPokemonApiProvider();
+        new TestMain().generateGroups();
     }
 
     /**
@@ -25,7 +25,7 @@ public class TestMain {
      */
     private void generateGroups() {
         List<Integer> list = Stream.iterate(1, integer -> integer + 1)
-                .limit(15)
+                .limit(3)
                 .collect(Collectors.toList());
         Collections.shuffle(list, new Random());
         System.out.println(list);
