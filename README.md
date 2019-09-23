@@ -5,6 +5,6 @@ Clean-architecture based Java application. This app retrieves pockemons informat
 
 **1. Domain** is a business logic.
 
-**2. Data** is an implementation.
+**2. Data** is an implementation (storing, getting and sending).
 
 **3. Presentation** is a layer for interaction with user.
