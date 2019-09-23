@@ -7,4 +7,4 @@ Clean-architecture based Java application. This app retrieves pockemons informat
 
 **2. Data** is an implementation.
 
-**3 Presentation.** is a layer for interaction with user.
+**3. Presentation** is a layer for interaction with user.
