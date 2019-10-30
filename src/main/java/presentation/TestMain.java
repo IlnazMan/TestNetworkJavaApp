@@ -16,19 +16,7 @@ public class TestMain {
 
     public static void main(String[] args) {
         System.out.println("Enter pokemon id:");
-        //new TestMain().testPokemonApiProvider();
-        new TestMain().generateGroups();
-    }
-
-    /**
-     * group generator
-     */
-    private void generateGroups() {
-        List<Integer> list = Stream.iterate(1, integer -> integer + 1)
-                .limit(3)
-                .collect(Collectors.toList());
-        Collections.shuffle(list, new Random());
-        System.out.println(list);
+        new TestMain().testPokemonApiProvider();
     }
 
     private void testPokemonApiProvider() {
